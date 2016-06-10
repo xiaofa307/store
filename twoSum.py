@@ -15,3 +15,25 @@ def twosum(nums,target):
                return result  
         
 print twosum([1,2,5,8,10],6);
+
+
+
+
+def twoSum(nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        if len(nums) <= 1:
+            return False
+        buff_dict = {}
+        for i in range(len(nums)):
+            print buff_dict
+            if nums[i] in buff_dict:
+                return [buff_dict[nums[i]], i+1]
+            else:
+                buff_dict[target - nums[i]] = i+1
+        
+print twoSum([77,7,11,2],9);
+
